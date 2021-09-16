@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "C6R4Lh3L8BDf9oqNz5fc7jl+INIDd6ZPbFq/0vdyL1Nt6ehWf9RPy5ViEGEsKvqXSNTbaJ1nDYJakTYN3hvVBQ==",
+  "success": true,
+  "projectFilePath": "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\Servicios\\Servicios.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Marce\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Marce\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Marce\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\Marce\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\Marce\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\Marce\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
