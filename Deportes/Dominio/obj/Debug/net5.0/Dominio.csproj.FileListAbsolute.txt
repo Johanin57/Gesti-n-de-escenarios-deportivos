@@ -1,0 +1,12 @@
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Dominio\obj\Debug\net5.0\Dominio.csprojAssemblyReference.cache
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Dominio\obj\Debug\net5.0\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Dominio\obj\Debug\net5.0\Dominio.AssemblyInfoInputs.cache
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Dominio\obj\Debug\net5.0\Dominio.AssemblyInfo.cs
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Dominio\obj\Debug\net5.0\Dominio.csproj.CoreCompileInputs.cache
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Dominio\bin\Debug\net5.0\Dominio.deps.json
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Dominio\bin\Debug\net5.0\Dominio.dll
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Dominio\bin\Debug\net5.0\ref\Dominio.dll
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Dominio\bin\Debug\net5.0\Dominio.pdb
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Dominio\obj\Debug\net5.0\Dominio.dll
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Dominio\obj\Debug\net5.0\ref\Dominio.dll
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Dominio\obj\Debug\net5.0\Dominio.pdb
