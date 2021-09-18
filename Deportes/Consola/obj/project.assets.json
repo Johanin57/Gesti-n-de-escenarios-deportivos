@@ -5784,8 +5784,8 @@
     },
     "Persistencia/1.0.0": {
       "type": "project",
-      "path": "../Persistencia/Persistencia.csproj",
-      "msbuildProject": "../Persistencia/Persistencia.csproj"
+      "path": "../persistencia/Persistencia.csproj",
+      "msbuildProject": "../persistencia/Persistencia.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5821,8 +5821,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\Persistencia\\Persistencia.csproj": {
-              "projectPath": "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\Persistencia\\Persistencia.csproj"
+            "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\persistencia\\Persistencia.csproj": {
+              "projectPath": "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\persistencia\\Persistencia.csproj"
             }
           }
         }

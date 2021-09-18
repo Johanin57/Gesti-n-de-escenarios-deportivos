@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\Persistencia\\Persistencia.csproj": {
-                "projectPath": "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\Persistencia\\Persistencia.csproj"
+              "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\persistencia\\Persistencia.csproj": {
+                "projectPath": "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\persistencia\\Persistencia.csproj"
               }
             }
           }
@@ -124,14 +124,14 @@
         }
       }
     },
-    "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\Persistencia\\Persistencia.csproj": {
+    "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\persistencia\\Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\Persistencia\\Persistencia.csproj",
+        "projectUniqueName": "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\persistencia\\Persistencia.csproj",
         "projectName": "Persistencia",
-        "projectPath": "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\Persistencia\\Persistencia.csproj",
+        "projectPath": "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\persistencia\\Persistencia.csproj",
         "packagesPath": "C:\\Users\\Marce\\.nuget\\packages\\",
-        "outputPath": "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\Persistencia\\obj\\",
+        "outputPath": "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Marce\\AppData\\Roaming\\NuGet\\NuGet.Config",

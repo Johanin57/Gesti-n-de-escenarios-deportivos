@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tcri4KNvwnjUUW1EHxvyTzsFPJaYYRRkJadmh/YT+zLBNGAEsTmNTxXLFR01mdf1Zymzfn6QvT0O541OJUDYKg==",
+  "dgSpecHash": "EKi27xnGMqXbb5bcCKC7qIS5wUBlkVG2Wx988HGQ/AxAOvmPMJ1gxHZKubgKS6TlRCGRUNW6OvJLi12lWO/oCQ==",
   "success": true,
-  "projectFilePath": "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\Persistencia\\Persistencia.csproj",
+  "projectFilePath": "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\persistencia\\Persistencia.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Marce\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Marce\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

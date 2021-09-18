@@ -14,6 +14,6 @@ namespace Dominio.Entidades
         // propiedad navigacional equipos torneos
         public List<equipos_torneos> equipos_torneos  {get;set;} 
         // propiedad navigacional torneos_equipos
-        public List<torneos_encuentros> equipos_encuentros {get;set;}
+        public List<torneos_encuentros> torneos_encuentros {get;set;}
     }
 }

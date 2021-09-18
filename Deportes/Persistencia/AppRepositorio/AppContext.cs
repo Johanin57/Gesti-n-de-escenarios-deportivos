@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Dominio.Entidades;
 
-namespace Persistencia.AppRepositorio
+namespace Persistencia
 {
     public class AppContext:DbContext
     {
@@ -15,7 +15,7 @@ namespace Persistencia.AppRepositorio
         public DbSet<torneo> tb_torneos{get;set;}
         public DbSet<encuentro> tb_encuentros{get;set;}
         public DbSet<equipos_torneos> tb_equipos_torneos{get;set;}
-        public DbSet<torneos_encuentros> tb_torneos_personas{get;set;}
+        public DbSet<torneos_encuentros> tb_torneos_encuentros{get;set;}
         public DbSet<personas_equipos> tb_personas_equipos{get;set;}
 
         //Metodos 
@@ -23,7 +23,7 @@ namespace Persistencia.AppRepositorio
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-Q0CR927 ; Initial Catalog=DB_Deportistas");
+                optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB ; Initial Catalog=DB_Deportes");
             }
         }
 

@@ -13,5 +13,7 @@ namespace Dominio.Entidades
         public List<personas_equipos> personas_equipos {get;set;}
         // propiedad navigacional equipos torneos
         public List<equipos_torneos> equipos_torneos {get;set;}
+        // propiedad navigacional torneos encuentros
+        public List<torneos_encuentros> torneos_encuentros { get; set; }
     }
 }
