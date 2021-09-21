@@ -52,8 +52,7 @@ namespace Persistencia.Migrations
                     RH = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     EPS = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     F_nacimiento = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Rol = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Id_encuentro = table.Column<int>(type: "int", nullable: false)
+                    Rol = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -186,7 +185,8 @@ namespace Persistencia.Migrations
                     Id_cancha = table.Column<int>(type: "int", nullable: false),
                     Fecha = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Id_persona = table.Column<int>(type: "int", nullable: false),
-                    canchaId = table.Column<int>(type: "int", nullable: true)
+                    canchaId = table.Column<int>(type: "int", nullable: true),
+                    personaId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -195,6 +195,12 @@ namespace Persistencia.Migrations
                         name: "FK_tb_encuentros_tb_canchas_canchaId",
                         column: x => x.canchaId,
                         principalTable: "tb_canchas",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_tb_encuentros_tb_personas_personaId",
+                        column: x => x.personaId,
+                        principalTable: "tb_personas",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -244,6 +250,11 @@ namespace Persistencia.Migrations
                 name: "IX_tb_encuentros_canchaId",
                 table: "tb_encuentros",
                 column: "canchaId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_tb_encuentros_personaId",
+                table: "tb_encuentros",
+                column: "personaId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_tb_equipos_torneos_equiposId",
@@ -298,9 +309,6 @@ namespace Persistencia.Migrations
                 name: "tb_torneos_encuentros");
 
             migrationBuilder.DropTable(
-                name: "tb_personas");
-
-            migrationBuilder.DropTable(
                 name: "tb_encuentros");
 
             migrationBuilder.DropTable(
@@ -311,6 +319,9 @@ namespace Persistencia.Migrations
 
             migrationBuilder.DropTable(
                 name: "tb_canchas");
+
+            migrationBuilder.DropTable(
+                name: "tb_personas");
 
             migrationBuilder.DropTable(
                 name: "tb_escenario");

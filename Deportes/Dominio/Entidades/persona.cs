@@ -21,7 +21,6 @@ namespace Dominio.Entidades
         public string Rol {get;set;}
         //propiedad Navigacional personas torneos
         public List<personas_equipos> personas_equipos {get;set;}
-
         public List<encuentro> encuentros { get; set;}
 
     }

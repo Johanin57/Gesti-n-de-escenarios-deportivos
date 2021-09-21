@@ -10,7 +10,7 @@ using Persistencia;
 namespace Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20210918005312_MigracionInicial")]
+    [Migration("20210920212742_MigracionInicial")]
     partial class MigracionInicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -75,9 +75,14 @@ namespace Persistencia.Migrations
                     b.Property<int?>("canchaId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("personaId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("canchaId");
+
+                    b.HasIndex("personaId");
 
                     b.ToTable("tb_encuentros");
                 });
@@ -198,9 +203,6 @@ namespace Persistencia.Migrations
                     b.Property<string>("Genero")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Id_encuentro")
-                        .HasColumnType("int");
-
                     b.Property<string>("N_identificacion")
                         .HasColumnType("nvarchar(max)");
 
@@ -320,6 +322,10 @@ namespace Persistencia.Migrations
                     b.HasOne("Dominio.Entidades.cancha", null)
                         .WithMany("encuentros")
                         .HasForeignKey("canchaId");
+
+                    b.HasOne("Dominio.Entidades.persona", null)
+                        .WithMany("encuentros")
+                        .HasForeignKey("personaId");
                 });
 
             modelBuilder.Entity("Dominio.Entidades.equipos_torneos", b =>
@@ -409,6 +415,8 @@ namespace Persistencia.Migrations
 
             modelBuilder.Entity("Dominio.Entidades.persona", b =>
                 {
+                    b.Navigation("encuentros");
+
                     b.Navigation("personas_equipos");
                 });
 
