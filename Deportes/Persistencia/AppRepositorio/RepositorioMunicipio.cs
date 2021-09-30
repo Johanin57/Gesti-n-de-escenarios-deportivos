@@ -5,8 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Dominio;
 using Dominio.Entidades;
-//using Dominio.Entidades;
-//using IRepositorioMunicipio;
 
 namespace Persistencia
 {

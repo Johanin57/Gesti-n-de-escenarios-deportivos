@@ -1,0 +1,17 @@
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Presentacion\obj\Debug\net5.0\Presentacion.csprojAssemblyReference.cache
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Presentacion\obj\Debug\net5.0\Presentacion.GeneratedMSBuildEditorConfig.editorconfig
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Presentacion\obj\Debug\net5.0\Presentacion.AssemblyInfoInputs.cache
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Presentacion\obj\Debug\net5.0\Presentacion.AssemblyInfo.cs
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Presentacion\obj\Debug\net5.0\Presentacion.csproj.CoreCompileInputs.cache
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Presentacion\obj\Debug\net5.0\Presentacion.MvcApplicationPartsAssemblyInfo.cache
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Presentacion\obj\Debug\net5.0\Presentacion.RazorAssemblyInfo.cache
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Presentacion\obj\Debug\net5.0\Presentacion.RazorAssemblyInfo.cs
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Presentacion\obj\Debug\net5.0\staticwebassets\Presentacion.StaticWebAssets.Manifest.cache
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Presentacion\obj\Debug\net5.0\staticwebassets\Presentacion.StaticWebAssets.xml
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Presentacion\obj\Debug\net5.0\scopedcss\bundle\Presentacion.styles.css
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Presentacion\obj\Debug\net5.0\Presentacion.TagHelpers.input.cache
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Presentacion\obj\Debug\net5.0\Presentacion.TagHelpers.output.cache
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Presentacion\obj\Debug\net5.0\Presentacion.RazorCoreGenerate.cache
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Presentacion\obj\Debug\net5.0\Presentacion.dll
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Presentacion\obj\Debug\net5.0\ref\Presentacion.dll
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Presentacion\obj\Debug\net5.0\Presentacion.pdb

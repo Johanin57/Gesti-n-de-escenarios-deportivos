@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Dominio.Entidades;
+
+namespace Persistencia
+{
+    interface IRepositorioEquipo
+    {
+        //Firmar metodos
+        bool CrearEquipo(equipo equipo);
+        equipo BuscarEquipo(int idEquipo);
+        bool EliminarEquipo(int IdEquipo);
+        bool ActualizarEquipo(equipo equipo);
+
+        IEnumerable<equipo> ListarEquipo();
+
+    }
+}
