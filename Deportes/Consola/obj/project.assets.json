@@ -5784,8 +5784,8 @@
     },
     "Persistencia/1.0.0": {
       "type": "project",
-      "path": "../persistencia/Persistencia.csproj",
-      "msbuildProject": "../persistencia/Persistencia.csproj"
+      "path": "../Persistencia/Persistencia.csproj",
+      "msbuildProject": "../Persistencia/Persistencia.csproj"
     }
   },
   "projectFileDependencyGroups": {

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Dominio.Entidades
+namespace Dominio
 {
     public class escenario
     {

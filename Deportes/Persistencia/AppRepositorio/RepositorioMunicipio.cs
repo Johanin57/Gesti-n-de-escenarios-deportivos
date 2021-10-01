@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dominio;
-using Dominio.Entidades;
-//using Dominio.Entidades;
-//using IRepositorioMunicipio;
+
 
 namespace Persistencia
 {
@@ -49,7 +47,7 @@ namespace Persistencia
         {
             bool eliminado = false;
             var municipio = _appContext.tb_municipios.Find(IdMunicipio);
-    
+
             if (municipio != null)
             {
                 try
@@ -85,7 +83,7 @@ namespace Persistencia
                     throw;
                 }
             }
-                return actualizar;
+            return actualizar;
         }
 
         //LISTAR MUNICIPIO
@@ -93,6 +91,16 @@ namespace Persistencia
         {
             return _appContext.tb_municipios;
         }
+
+        // Validar la exitencia de un municipio
+        /*bool validarNombre(municipio municipio)
+        {
+            bool existe = false;
+            var mun = _appContext.tb_municipios.Find(municipio.Nombre);
+
+             
+
+        }*/
 
     }
 }

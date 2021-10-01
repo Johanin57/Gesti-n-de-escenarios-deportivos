@@ -1,0 +1,26 @@
+﻿@page
+@model Presentacion.Pages.Cmunicipio.CrearModel
+@{
+    ViewData["Title"] = "Crear";
+}
+
+<h1>Crear Municipio</h1>
+
+<div>
+    <div>
+        <div>
+            <form method="post">
+                <div>
+                    <label asp-for="Municipio.Nombre"></label>
+                    <input asp-for="Municipio.Nombre"/>
+                </div>
+                <div>
+                    <input type="submit" value="CREAR"/>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-page="Ixdex">Ir al Inicio</a>
+    </div>
+</div>

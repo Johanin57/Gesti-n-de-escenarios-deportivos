@@ -1,0 +1,32 @@
+﻿@page
+@model Presentacion.Pages.Cmunicipio.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<H1>Listado de Municipio</H1>
+
+<a asp-page="Crear">Registar Municipio</a>
+<table class="table">
+    <thead>
+    <tr>
+        <th> Id </th>
+        <th> Nombre </th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Municipios)
+    {
+        <tr>
+            <td> @item.Id </td>
+            <td> @item.Nombre </td>
+            <td>
+                <a></a>
+                <a></a>
+                <a></a>
+            </td>
+        </tr>
+    }
+    </tbody>
+
+</table>
