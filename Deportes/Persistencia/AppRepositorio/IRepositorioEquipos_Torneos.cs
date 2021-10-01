@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Dominio.Entidades;
+using Dominio;
 
 namespace Persistencia
 {
-    interface IRepositorioEquipos_Torneos
+    public interface IRepositorioEquipos_Torneos
     {
         //Firmar metodos
         bool CrearEquipos_Torneos(equipos_torneos equipos_torneos);

@@ -1,11 +1,11 @@
-﻿using Dominio.Entidades;
+﻿using Dominio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Persistencia.AppRepositorio
+namespace Persistencia
 {
     public class RepositorioCancha : IRepositorioCancha
     {// atributos

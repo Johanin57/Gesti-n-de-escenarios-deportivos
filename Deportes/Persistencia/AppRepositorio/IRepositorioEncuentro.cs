@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Dominio.Entidades;
+using Dominio;
 
 
 namespace Persistencia
 {
-    interface IRepositorioEncuentro
+    public interface IRepositorioEncuentro
     {
         //Firmar metodos
         bool CrearEncuentro(encuentro encuentro);

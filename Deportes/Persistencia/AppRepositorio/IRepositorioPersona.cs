@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Dominio.Entidades;
+using Dominio;
 
 namespace Persistencia
 {
-    interface IRepositorioPersona    {
+    public interface IRepositorioPersona    {
         //Firmar metodos
         bool CrearPersona(persona Persona);
         persona BuscarPersona(int idPersona);

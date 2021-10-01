@@ -5784,8 +5784,8 @@
     },
     "Persistencia/1.0.0": {
       "type": "project",
-      "path": "../persistencia/Persistencia.csproj",
-      "msbuildProject": "../persistencia/Persistencia.csproj"
+      "path": "../Persistencia/Persistencia.csproj",
+      "msbuildProject": "../Persistencia/Persistencia.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5800,11 +5800,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\consola\\Consola.csproj",
+      "projectUniqueName": "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\Consola\\Consola.csproj",
       "projectName": "Consola",
-      "projectPath": "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\consola\\Consola.csproj",
+      "projectPath": "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\Consola\\Consola.csproj",
       "packagesPath": "C:\\Users\\Marce\\.nuget\\packages\\",
-      "outputPath": "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\consola\\obj\\",
+      "outputPath": "C:\\G-DRIVE\\PROYECTO MINTIC\\Gesti-n-de-escenarios-deportivos\\Deportes\\Consola\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Marce\\AppData\\Roaming\\NuGet\\NuGet.Config",

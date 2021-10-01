@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Dominio.Entidades;
+using Dominio;
 
 namespace Persistencia
 {
-    interface IRepositorioCancha
+    public interface IRepositorioCancha
     {
         //Firmar metodos
         bool CrearCancha(cancha cancha);
