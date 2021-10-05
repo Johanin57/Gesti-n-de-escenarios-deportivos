@@ -7,7 +7,7 @@ using Dominio;
 
 namespace Persistencia
 {
-    class RepositorioTorneos_Encuentros:IRepositorioTorneos_Encuentros
+    public class RepositorioTorneos_Encuentros:IRepositorioTorneos_Encuentros
     {
         // atributos
         private readonly AppContext _appContext;

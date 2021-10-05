@@ -10,11 +10,9 @@ namespace Persistencia
     public interface IRepositorioPersona    {
         //Firmar metodos
         bool CrearPersona(persona Persona);
-        persona BuscarPersona(int idPersona);
+        persona BuscarPersona(int n_identificacion);
         bool EliminarPersona(int IdPersona);
         bool ActualizarPersona(persona Persona);
-
         IEnumerable<persona> ListarPersonas();
-
     }
 }

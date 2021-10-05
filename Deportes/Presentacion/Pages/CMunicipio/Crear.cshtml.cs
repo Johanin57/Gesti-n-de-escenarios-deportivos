@@ -34,7 +34,7 @@ namespace Presentacion.Pages.Cmunicipio
             }
             else
             {
-                ViewData["Error"] = "El municipio ya exixte";
+                ViewData["Error"] = "El municipio ya exixse";
                 return Page();
             }
         }

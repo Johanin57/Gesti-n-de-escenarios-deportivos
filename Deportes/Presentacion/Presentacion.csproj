@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\CPersona\" />
-    <Folder Include="Pages\CTorneo\" />
+    <Folder Include="Pages\CEscenario\" />
   </ItemGroup>
 
   <ItemGroup>

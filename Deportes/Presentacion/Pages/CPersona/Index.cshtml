@@ -1,0 +1,44 @@
+﻿@page
+@model Presentacion.Pages.CPersona.IndexModel
+@{
+    ViewData["Title"] = "Persona";
+}
+
+<H1>Listado de Personas</H1>
+
+<a asp-page="Crear">Registar Persona</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th> Id </th>
+            <th> Nombre </th>
+            <th> Apellido </th>
+            <th> Celular </th>
+            <th> Correo </th>
+            <th> EPS </th>
+            <th> Rol </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Personas)
+        {
+        <tr>
+            <td> @item.Id </td>
+            <td> @item.Nombres </td>
+            <td> @item.Apellidos </td>
+            <td> @item.Celular </td>
+            <td> @item.Correo </td>
+            <td> @item.EPS </td>
+            <td> @item.Rol </td>
+            <th>
+                <a asp-page="./Editar" asp-route-id="@item.Id">Editar</a>
+                <a>   </a>
+                <a asp-page="./Eliminar" asp-route-id="@item.Id">Eliminar</a>
+                <a>   </a>
+                <a asp-page="./Detalle" asp-route-id="@item.Id">Detalles</a>
+            </th>
+        </tr>
+        }
+    </tbody>
+</table>
+

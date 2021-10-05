@@ -23,17 +23,21 @@ namespace Persistencia
         bool IRepositorioMunicipio.CrearMunicipio(municipio municipio)
         {
             bool creado = false;
-            try
-            {
-                _appContext.tb_municipios.Add(municipio);
-                _appContext.SaveChanges();
-                creado = true;
+            bool existe = ValidarNombre(municipio);
+            if(!existe)
+            { 
+                try
+                {
+                    _appContext.tb_municipios.Add(municipio);
+                    _appContext.SaveChanges();
+                    creado = true;
+                }
+                catch (System.Exception)
+                {
+                    return creado;
+                }
             }
-            catch (System.Exception)
-            {
                 return creado;
-            }
-            return creado;
         }
 
         //BUSCAR MUNICIPIOS
@@ -93,14 +97,19 @@ namespace Persistencia
         }
 
         // Validar la exitencia de un municipio
-        /*bool validarNombre(municipio municipio)
+        bool ValidarNombre(municipio municipio)
         {
             bool existe = false;
-            var mun = _appContext.tb_municipios.Find(municipio.Nombre);
+            var mun = _appContext.tb_municipios.FirstOrDefault(m=>m.Nombre == municipio.Nombre);
+            if (mun != null)
+            {
+                existe = true;
+            }
+            return existe;
+        }
 
-             
 
-        }*/
+
 
     }
 }

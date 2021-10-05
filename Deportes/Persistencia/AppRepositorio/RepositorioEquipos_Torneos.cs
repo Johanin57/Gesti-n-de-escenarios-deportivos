@@ -7,7 +7,7 @@ using Dominio;
 
 namespace Persistencia
 {
-    class RepositorioEquipos_Torneos: IRepositorioEquipos_Torneos
+    public class RepositorioEquipos_Torneos: IRepositorioEquipos_Torneos
     {
 
         // atributos

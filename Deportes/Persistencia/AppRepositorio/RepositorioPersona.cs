@@ -19,33 +19,37 @@ namespace Persistencia
         }
 
         //CREAR Persona
-        bool IRepositorioPersona. CrearPersona(persona Persona)
+        bool IRepositorioPersona.CrearPersona(persona Persona)
         {
             bool creado = false;
-            try
+            bool existe = ValidarNombre(Persona);
+            if (!existe)
             {
-                _appContext.tb_personas.Add(Persona);
-                _appContext.SaveChanges();
-                creado = true;
-            }
-            catch (System.Exception)
-            {
-                return creado;
+                try
+                {
+                    _appContext.tb_personas.Add(Persona);
+                    _appContext.SaveChanges();
+                    creado = true;
+                }
+                catch (System.Exception)
+                {
+                    return creado;
+                }
             }
             return creado;
         }
 
         //BUSCAR PersonaS
-        persona IRepositorioPersona.BuscarPersona(int Id_Persona)
+        persona IRepositorioPersona.BuscarPersona(int N_identificacion)
         {
-            return _appContext.tb_personas.Find(Id_Persona);
+            return _appContext.tb_personas.Find(N_identificacion);
         }
 
         //ELIMINAR Persona
-        bool IRepositorioPersona.EliminarPersona(int IdPersona)
+        bool IRepositorioPersona.EliminarPersona(int N_identificacion)
         {
             bool eliminado = false;
-            var Persona = _appContext.tb_personas.Find(IdPersona);
+            var Persona = _appContext.tb_personas.Find(N_identificacion);
 
             if (Persona != null)
             {
@@ -102,7 +106,17 @@ namespace Persistencia
             return _appContext.tb_personas;
         }
 
-
+        // Validar la exitencia de un municipio
+        bool ValidarNombre(persona personas)
+        {
+            bool existe = false;
+            var mun = _appContext.tb_personas.FirstOrDefault(m => m.N_identificacion == personas.N_identificacion);
+            if (mun != null)
+            {
+                existe = true;
+            }
+            return existe;
+        }
 
     }
 }

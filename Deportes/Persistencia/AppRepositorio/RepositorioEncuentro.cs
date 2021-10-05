@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Persistencia
 {
-    class RepositorioEncuentro : IRepositorioEncuentro
+    public class RepositorioEncuentro : IRepositorioEncuentro
     {
         // atributos
         private readonly AppContext _appContext;

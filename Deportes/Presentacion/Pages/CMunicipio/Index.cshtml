@@ -1,7 +1,7 @@
 ﻿@page
 @model Presentacion.Pages.Cmunicipio.IndexModel
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Municipio";
 }
 
 <H1>Listado de Municipio</H1>
@@ -21,9 +21,12 @@
             <td> @item.Id </td>
             <td> @item.Nombre </td>
             <td>
-                <a></a>
-                <a></a>
-                <a></a>
+                <a asp-page="./Editar" asp-route-id="@item.Id">Editar</a>
+                <a>  -  </a>
+                <a asp-page="./Eliminar" asp-route-id="@item.Id">Eliminar</a>
+                <a>  -  </a>
+                <a asp-page="./Detalle" asp-route-id="@item.Id">Detalles</a>
+
             </td>
         </tr>
     }

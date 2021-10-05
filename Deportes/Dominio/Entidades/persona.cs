@@ -7,7 +7,7 @@ namespace Dominio
     public class persona
     {
         public int Id {get;set;}
-        public string N_identificacion {get;set;}
+        public int N_identificacion {get;set;}
         public string tipo_persona {get;set;}
         public string Nombres {get;set;}
         public string Apellidos {get;set;}

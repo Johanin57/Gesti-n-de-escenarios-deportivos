@@ -1,3 +1,8 @@
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Consola\obj\Debug\net5.0\Consola.csprojAssemblyReference.cache
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Consola\obj\Debug\net5.0\Consola.GeneratedMSBuildEditorConfig.editorconfig
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Consola\obj\Debug\net5.0\Consola.AssemblyInfoInputs.cache
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Consola\obj\Debug\net5.0\Consola.AssemblyInfo.cs
+C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Consola\obj\Debug\net5.0\Consola.csproj.CoreCompileInputs.cache
 C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Consola\bin\Debug\net5.0\Consola.exe
 C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Consola\bin\Debug\net5.0\Consola.deps.json
 C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Consola\bin\Debug\net5.0\Consola.runtimeconfig.json
@@ -56,11 +61,6 @@ C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Consola\bin
 C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Consola\bin\Debug\net5.0\Persistencia.dll
 C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Consola\bin\Debug\net5.0\Persistencia.pdb
 C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Consola\bin\Debug\net5.0\Dominio.pdb
-C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Consola\obj\Debug\net5.0\Consola.csprojAssemblyReference.cache
-C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Consola\obj\Debug\net5.0\Consola.GeneratedMSBuildEditorConfig.editorconfig
-C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Consola\obj\Debug\net5.0\Consola.AssemblyInfoInputs.cache
-C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Consola\obj\Debug\net5.0\Consola.AssemblyInfo.cs
-C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Consola\obj\Debug\net5.0\Consola.csproj.CoreCompileInputs.cache
 C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Consola\obj\Debug\net5.0\Consola.csproj.CopyComplete
 C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Consola\obj\Debug\net5.0\Consola.dll
 C:\G-DRIVE\PROYECTO MINTIC\Gesti-n-de-escenarios-deportivos\Deportes\Consola\obj\Debug\net5.0\ref\Consola.dll

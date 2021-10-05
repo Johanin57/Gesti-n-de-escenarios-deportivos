@@ -28,6 +28,14 @@ namespace Presentacion
             services.AddRazorPages();
             //Inyeccion de dependencia
             services.AddScoped<IRepositorioMunicipio, RepositorioMunicipio>();
+            services.AddScoped<IRepositorioPersona, RepositorioPersona>();
+            services.AddScoped<IRepositorioCancha, RepositorioCancha>();
+            services.AddScoped<IRepositorioEncuentro, RepositorioEncuentro>();
+            services.AddScoped<IRepositorioEquipo, RepositorioEquipo>();
+            services.AddScoped<IRepositorioEquipos_Torneos, RepositorioEquipos_Torneos>();
+            services.AddScoped<IRepositorioEscenario, RepositorioEscenario>();
+            services.AddScoped<IRepositorioTorneo, RepositorioTorneo>();
+            services.AddScoped<IRepositorioTorneos_Encuentros, RepositorioTorneos_Encuentros>();
             //REgistrar el contexto
             services.AddDbContext<Persistencia.AppContext>();
         }
