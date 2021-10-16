@@ -16,6 +16,7 @@ namespace Persistencia
         bool ActualizarMunicipio(municipio municipio);
 
         IEnumerable<municipio> ListarMunicipios();
+        List<municipio> ListarMunicipios1();
 
     }
 }

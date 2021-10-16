@@ -42,6 +42,11 @@ namespace Persistencia
             return _appContext.tb_equipos.Find(Id_Equipo);
         }
 
+        equipo IRepositorioEquipo.BuscarEquipoPorNombre(string Nombre_equipo)
+        {
+            return _appContext.tb_equipos.FirstOrDefault(x => x.Nombre == Nombre_equipo);
+        }
+
         //ELIMINAR Equipo
         bool IRepositorioEquipo.EliminarEquipo(int IdEquipo)
         {
@@ -92,9 +97,14 @@ namespace Persistencia
         IEnumerable<equipo> IRepositorioEquipo.ListarEquipo()
         {
             return _appContext.tb_equipos;
+
+        }
+        List<equipo> IRepositorioEquipo.ListarEquipo1()
+        {
+            return _appContext.tb_equipos.ToList();
         }
 
 
-    }
 
+    }
 }

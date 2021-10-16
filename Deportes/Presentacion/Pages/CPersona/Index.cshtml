@@ -6,13 +6,13 @@
 
 <H1>Listado de Personas</H1>
 
-<a asp-page="Crear">Registar Persona</a>
+<a asp-page="Crear" class="btn btn-secondary">Registar Persona</a>
 <table class="table">
     <thead>
         <tr>
-            <th> Id </th>
             <th> Nombre </th>
             <th> Apellido </th>
+            <th> Documento </th>
             <th> Celular </th>
             <th> Correo </th>
             <th> EPS </th>
@@ -23,19 +23,19 @@
         @foreach (var item in Model.Personas)
         {
         <tr>
-            <td> @item.Id </td>
             <td> @item.Nombres </td>
             <td> @item.Apellidos </td>
+            <td> @item.N_identificacion </td>
             <td> @item.Celular </td>
             <td> @item.Correo </td>
             <td> @item.EPS </td>
             <td> @item.Rol </td>
             <th>
-                <a asp-page="./Editar" asp-route-id="@item.Id">Editar</a>
-                <a>   </a>
-                <a asp-page="./Eliminar" asp-route-id="@item.Id">Eliminar</a>
-                <a>   </a>
-                <a asp-page="./Detalle" asp-route-id="@item.Id">Detalles</a>
+                <a asp-page="./Editar" asp-route-id="@item.N_identificacion" class="btn btn-warning">Editar</a>
+                <a>  -  </a>
+                <a asp-page="./Detalle" asp-route-id="@item.N_identificacion" class="btn btn-success">Detalles</a>
+                <a>  -  </a>
+                <a asp-page="./Eliminar" asp-route-id="@item.N_identificacion" class="btn btn-danger">Eliminar</a>
             </th>
         </tr>
         }

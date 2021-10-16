@@ -6,5 +6,9 @@
     <WebStackScaffolding_ViewDialogWidth>650</WebStackScaffolding_ViewDialogWidth>
     <ShowAllFiles>true</ShowAllFiles>
     <WebStackScaffolding_DbContextDialogWidth>650</WebStackScaffolding_DbContextDialogWidth>
+    <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

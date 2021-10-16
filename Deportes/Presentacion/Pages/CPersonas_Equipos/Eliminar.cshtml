@@ -1,0 +1,44 @@
+﻿@page
+@model Presentacion.Pages.CPersonas_Equipos.EliminarModel
+@{
+    ViewData["Title"] = "ELiminar";
+}
+}
+<h1>Eliminar Persona_Equipo</h1>
+<h2 class="">@ViewData["Error"]</h2>
+<h2>@ViewData["funciono"]</h2>
+
+<div class="form-horizontal">
+    <div>
+        <label>
+            @if (Model.ObjPersona != null)
+            {
+            <H4>Confima que desea Eliminar a @Model.ObjPersona.Nombres @Model.ObjPersona.Apellidos del equipo @Model.ObjEquipo.Nombre. </H4>
+            }
+            else { <h4>sjdhskjfhsdjfhg</h4>}
+        </label>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div type="Hidden" class="form-group">
+                    <label asp-for="ObjPersona.Id" class="control-label" hidden></label>
+                    <input asp-for="ObjPersona.Id" class="control-label" name="Id_Persona" hidden/>
+
+                    <label asp-for="ObjEquipo.Id" class="control-label" hidden  ></label>
+                    <input asp-for="ObjEquipo.Id" class="control-label" name="Id_equipos" hidden/>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="ELIMINAR" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-page="/CEquipo/Index">Ir al Inicio</a>
+    </div>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

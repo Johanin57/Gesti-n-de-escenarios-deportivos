@@ -1,0 +1,33 @@
+﻿@page
+@model Presentacion.Pages.CPersona.EliminarModel
+@{
+    ViewData["Title"] = "ELiminar";
+}
+}
+<h1>Eliminar Persona</h1>
+<h2 class="">@ViewData["Error"]</h2>
+<h2>@ViewData["funciono"]</h2>
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <input type="" asp-page="ObjPersona.N_identidad" />
+                <div type="Hidden" class="form-group">
+                    <label asp-for="ObjPersona.N_identificacion" class="control-label"></label>
+                    <label asp-for="ObjPersona.N_identificacion" class="control-label" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="ELIMINAR" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-page="./Index">Ir al Inicio</a>
+    </div>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

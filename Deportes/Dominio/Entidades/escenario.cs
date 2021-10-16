@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Dominio
 {
-    public class escenario
+    public class Escenario
     {
         public int Id {get;set;}
         public string Nombre {get;set;}

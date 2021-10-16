@@ -1,0 +1,46 @@
+﻿@page
+@model Presentacion.Pages.CEscenario.IndexModel
+@{
+    ViewData["Title"] = "Escenario";
+}
+
+<H1>Listado de Escenario</H1>
+
+<a asp-page="Crear" class="btn btn-secondary">Registar Escenario</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th> Nombre </th>
+            <th> Direcion </th>
+            <th> Telefono </th>
+            <th> Municipio </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.esceView)
+        {
+            <tr>
+                <td> @item.Nombre </td>
+                <td> @item.Direccion </td>
+                <td> @item.Telefono </td>
+                <td> @item.minucipioNombre</td>
+
+
+                <td>
+                    <a asp-page="/CCancha/Crear" asp-route-id="" class="btn btn-info">Chanchas</a>
+                    <a>  -  </a>
+                    <a asp-page="./Editar" asp-route-id="@item.Id" class="btn btn-warning">Editar</a>
+                    <a>  -  </a>
+                    <a asp-page="./Detalle" asp-route-id="@item.Id" class="btn btn-success">Detalles</a>
+                    <a>  -  </a>
+                    <a asp-page="./Eliminar" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+
+
+                </td>
+
+          </tr>
+        }
+    </tbody>
+
+</table>

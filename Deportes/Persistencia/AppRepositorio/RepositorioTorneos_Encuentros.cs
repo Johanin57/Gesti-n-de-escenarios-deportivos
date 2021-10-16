@@ -28,7 +28,7 @@ namespace Persistencia
                 _appContext.SaveChanges();
                 creado = true;
             }
-            catch (System.Exception)
+            catch (System.Exception ex)
             {
                 return creado;
             }
@@ -36,9 +36,16 @@ namespace Persistencia
         }
 
         //BUSCAR Torneos_EncuentrosS
-        torneos_encuentros IRepositorioTorneos_Encuentros.BuscarTorneos_Encuentros(int Id_Torneo)
+        List<torneos_encuentros> IRepositorioTorneos_Encuentros.BuscarEncuentroPorTorneo(int Id_Torneo)
         {
-            return _appContext.tb_torneos_encuentros.Find(Id_Torneo);
+            var list =  _appContext.tb_torneos_encuentros.ToList();
+
+            return list.Where(x => x.Id_torneo.Equals(Id_Torneo)).ToList();
+        }
+
+        torneos_encuentros IRepositorioTorneos_Encuentros.BuscarTorneosEncuentrosEquipos(int Id_torneo, int Id_encuentro, int Id_equipo)
+        {
+            return _appContext.tb_torneos_encuentros.Where(x => x.Id_torneo.Equals(Id_torneo) && x.Id_encuentro.Equals(Id_encuentro) && x.Id_equipo.Equals(Id_equipo)).FirstOrDefault();
         }
 
         //ELIMINAR Torneos_Encuentros

@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\CEscenario\" />
+    <Content Remove="Pages\CPersonas_Equipos\Miembros.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,6 +20,38 @@
   <ItemGroup>
     <ProjectReference Include="..\Dominio\Dominio.csproj" />
     <ProjectReference Include="..\Persistencia\Persistencia.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Pages\CPersona\Crear - Copia %282%29 - Copia.cshtml.cs">
+      <DependentUpon>Crear - Copia (2).cshtml.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\CPersona\Crear - Copia %282%29.cshtml.cs">
+      <DependentUpon>Crear.cshtml.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\CPersona\Crear - Copia %283%29.cshtml.cs">
+      <DependentUpon>Crear.cshtml.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\CPersona\Crear - Copia - Copia %282%29.cshtml.cs">
+      <DependentUpon>Crear - Copia.cshtml.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\CPersona\Crear - Copia - Copia - Copia.cshtml.cs">
+      <DependentUpon>Crear - Copia - Copia.cshtml.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\CPersona\Crear - Copia - Copia.cshtml.cs">
+      <DependentUpon>Crear - Copia.cshtml.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\CPersona\Crear - Copia.cshtml.cs">
+      <DependentUpon>Crear.cshtml.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\CEquipo\Miembros.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
 </Project>

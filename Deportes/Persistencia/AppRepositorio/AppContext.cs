@@ -10,7 +10,7 @@ namespace Persistencia
         public DbSet<persona> tb_personas{get;set;}
         public DbSet<equipo> tb_equipos{get;set;}
         public DbSet<municipio> tb_municipios{get;set;}
-        public DbSet<escenario> tb_escenario{get;set;}
+        public DbSet<Escenario> tb_escenario{get;set;}
         public DbSet<cancha> tb_canchas{get;set;}
         public DbSet<torneo> tb_torneos{get;set;}
         public DbSet<encuentro> tb_encuentros{get;set;}

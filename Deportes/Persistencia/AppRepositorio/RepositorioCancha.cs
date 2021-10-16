@@ -93,6 +93,10 @@ namespace Persistencia
         {
             return _appContext.tb_canchas;
         }
+        List<cancha> IRepositorioCancha.ListarCancha1()
+        {
+            return _appContext.tb_canchas.ToList();
+        }
 
 
     }

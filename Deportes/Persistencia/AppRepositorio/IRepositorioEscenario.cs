@@ -10,11 +10,13 @@ namespace Persistencia
     public interface IRepositorioEscenario
     {
         //Firmar metodos
-        bool CrearEscenario(escenario escenario);
-        escenario BuscarEscenario(int IdEscenario);
+        bool CrearEscenario(Escenario escenario);
+        Escenario BuscarEscenario(int IdEscenario);
         bool EliminarEscenario(int IdEscenario);
-        bool ActualizarEscenario(escenario escenario);
+        bool ActualizarEscenario(Escenario escenario);
 
-        IEnumerable<escenario> ListarEscenario();
+        IEnumerable<Escenario> ListarEscenario();
+
+        List<Escenario> ListarEscenario1();
     }
 }

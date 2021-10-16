@@ -13,13 +13,11 @@ namespace Presentacion.Pages.CMunicipio
     {
         //Objeto para utilizar el repositorio
         private readonly IRepositorioMunicipio _repomuni;
-
         // Constructor
         public EditModel(IRepositorioMunicipio repomuni) 
         { 
             this._repomuni = repomuni; 
-        }
-        
+        }        
         //Propiedad transportable
         [BindProperty]
         public municipio ObjMunicipio { get; set; }

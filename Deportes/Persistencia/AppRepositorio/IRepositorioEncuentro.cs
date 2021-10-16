@@ -17,5 +17,6 @@ namespace Persistencia
         bool ActualizarEncuentro(encuentro encuentro);
 
         IEnumerable<encuentro> ListarEncuentros();
+        List<encuentro> ListarEncuentros1();
     }
 }

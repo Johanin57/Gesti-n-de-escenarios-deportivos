@@ -16,6 +16,6 @@ namespace Persistencia
         bool ActualizarTorneo(torneo Torneo);
 
         IEnumerable<torneo> ListarTorneos();
-
+        List<torneo> ListarTorneos1();
     }
 }

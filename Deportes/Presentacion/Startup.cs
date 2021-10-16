@@ -29,6 +29,7 @@ namespace Presentacion
             //Inyeccion de dependencia
             services.AddScoped<IRepositorioMunicipio, RepositorioMunicipio>();
             services.AddScoped<IRepositorioPersona, RepositorioPersona>();
+            services.AddScoped<IRepositorioPersona_Equipo, RepositorioPersona_Equipo>();
             services.AddScoped<IRepositorioCancha, RepositorioCancha>();
             services.AddScoped<IRepositorioEncuentro, RepositorioEncuentro>();
             services.AddScoped<IRepositorioEquipo, RepositorioEquipo>();

@@ -1,0 +1,47 @@
+﻿@page
+@model Presentacion.Pages.CEquipo.EditarModel
+@{
+    ViewData["Title"] = "Editar Equipo";
+}
+
+<h1>Editar Equipo</h1>
+<h2 class="">@ViewData["Error"]</h2>
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-8">
+            <form method="post">
+                <div class="form-group">
+                    <label asp-for="ObjEquipo.Id" hidden></label>
+                    <input asp-for="ObjEquipo.Id" hidden/>
+                    <table>
+                        <tr>
+                            <td><label asp-for="ObjEquipo.Nombre"></label></td>
+                            <td><input asp-for="ObjEquipo.Nombre" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="ObjEquipo.Deporte"></label></td>
+                            <td><input asp-for="ObjEquipo.Deporte" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="ObjEquipo.F_creacion">Fecha Inicio</label></td>
+                            <td> <input asp-for="ObjEquipo.F_creacion" /></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="EDITAR" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-page="./Index">Ir al Inicio</a>
+    </div>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
+
+

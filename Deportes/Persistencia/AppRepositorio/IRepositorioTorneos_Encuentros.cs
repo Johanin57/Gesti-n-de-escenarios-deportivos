@@ -12,7 +12,8 @@ namespace Persistencia
     {
         //Firmar metodos
         bool CrearTorneos_Encuentros(torneos_encuentros torneos_Encuentros);
-        torneos_encuentros BuscarTorneos_Encuentros(int idTorneos_Encuentros);
+        List<torneos_encuentros> BuscarEncuentroPorTorneo(int Id_Torneo);
+        torneos_encuentros BuscarTorneosEncuentrosEquipos(int Id_torneo, int Id_encuentro, int Id_equipo);
         bool EliminarTorneos_Encuentros(int IdTorneos_Encuentros);
         bool ActualizarTorneos_Encuentros(torneos_encuentros torneos_Encuentros);
 

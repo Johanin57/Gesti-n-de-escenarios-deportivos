@@ -1,0 +1,46 @@
+﻿@page
+@model Presentacion.Pages.CEncuentro.IndexModel
+@{
+    ViewData["Title"] = "Encuentro";
+}
+
+<H1>Listado de Encuentro</H1>
+
+<a asp-page="Crear" class="btn btn-secondary">Registar Encuentro</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th> Torneo/Categoria </th>
+            <th> Cancha/Deporte </th>
+            <th> Arbitro </th>
+            <th> Fecha</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.EncuView)
+        {
+        <tr>
+            <td hidden> @item.Id </td>
+            <td hidden> @item.Id_torneo </td>
+            <td> @item.TorneoNombre </td>
+            <td> @item.CanchaNombre </td>
+            <td> @item.Fecha </td>
+            <td> @item.Arbitro </td>
+
+            <td>
+                <a asp-page="./Vincular" asp-route-Id_encuentro="@item.Id" asp-route-Id_torneo="@item.Id_torneo" class="btn btn-info">Vincular Eq</a>
+                <a>  -  </a>
+                <a asp-page="./Editar" asp-route-id="@item.Id" class="btn badge-warning">Editar</a>
+                <a>  -  </a>
+                <a asp-page="./Detalles" asp-route-id="@item.Id" class="btn btn-success">Detalles</a>
+                <a>  -  </a>
+                <a asp-page="./Eliminar" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+
+
+            </td>
+
+        </tr>
+        }
+    </tbody>
+
+</table>

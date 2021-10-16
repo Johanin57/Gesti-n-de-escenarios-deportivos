@@ -1,0 +1,54 @@
+﻿@page
+@model Presentacion.Pages.CTorneo.DetallesModel
+@{
+    ViewData["Title"] = "Editar Torneo";
+}
+
+<h1>Editar Torneo</h1>
+<h2 class="">@ViewData["Error"]</h2>
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div class="form-group">
+                    <table>
+                        <tr>
+                            <td><label asp-for="ObjTorneo.Id" hidden></label></td>
+                            <td><input asp-for="ObjTorneo.Id" hidden /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="ObjTorneo.Nombre"></label></td>
+                            <td><input asp-for="ObjTorneo.Nombre" readonly/></br></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="ObjTorneo.Categoria"></label></td>
+                            <td><input asp-for="ObjTorneo.Categoria" readonly/></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="ObjTorneo.F_Inicio">Fecha Inicio</label></td>
+                            <td><input asp-for="ObjTorneo.F_Inicio" readonly/></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="ObjTorneo.F_Fin">Fecha Fin</label></td>
+                            <td><input asp-for="ObjTorneo.F_Fin" readonly/></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="ObjTorneo.N_rondas">Num. Rodas</label></td>
+                            <td><input asp-for="ObjTorneo.N_rondas" readonly/></td>
+                        </tr>
+                    </table>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-page="./Index">Ir al Inicio</a>
+    </div>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
+

@@ -1,0 +1,59 @@
+﻿@page
+@model Presentacion.Pages.CEscenario.CrearModel
+@{
+    ViewData["Title"] = "Crear Escenario";
+}
+
+<h1>Crear Escenario</h1>
+<h2 class="">@ViewData["Error"]</h2>
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div class="form-group">
+                    <table>
+                        <tr>
+                            <td><label asp-for="Escenario.Nombre"></label></td>
+                            <td><input asp-for="Escenario.Nombre" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="Escenario.Direccion"></label></td>
+                            <td><input asp-for="Escenario.Direccion" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="Escenario.Telefono"></label></td>
+                            <td> <input asp-for="Escenario.Telefono" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="Escenario.Id_municipio"> Municipio (ID)</label></td>
+                            <td>
+                                <select asp-for="Escenario.Id_municipio">
+                                    <option value="">Seleccione una opcion</option>
+                                    @foreach (var item in Model.mun)
+                                    {
+                                        <option value="@item.Id">@item.Nombre</option>
+                                    }
+
+                                </select>
+                                <small asp-page="/CMunicipio/Crear">Para un municipio diferencte click AQUI</small>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="CREAR" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-page="./Index">Ir al Inicio</a>
+    </div>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
+

@@ -1,0 +1,36 @@
+﻿@page
+@model Presentacion.Pages.CCancha.EliminarModel
+@{
+    ViewData["Title"] = "Eliminar Cancha";
+}
+<h1>Eliminar Cancha</h1>
+<h2 class="">@ViewData["Error"]</h2>
+<h2>@ViewData["funciono"]</h2>
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <input type="" asp-page="ObjCancha.Id" />
+                <div class="form-group">
+                    <label asp-for="ObjCancha.Id" class="control-label" hidden></label>
+                    <label asp-for="ObjCancha.Id" class="control-label" hidden /></br>
+
+                    <label asp-for="ObjCancha.Nombre" class="control-label">Confirma que desea eliminar la Cancha</label>
+                    <input asp-for="ObjCancha.Nombre" class="control-label" readonly /></br>
+
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="ELIMINAR" class="btn btn-danger" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-page="./Index">Ir al Inicio</a>
+    </div>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

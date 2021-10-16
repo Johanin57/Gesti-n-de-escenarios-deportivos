@@ -14,17 +14,18 @@ namespace Presentacion.Pages.Cmunicipio
         //Crear el objeto
         private readonly IRepositorioMunicipio _repomuni;
         //Constructor
-        public CrearModel(IRepositorioMunicipio repomuni) 
+        public CrearModel(IRepositorioMunicipio repomuni)
         {
             this._repomuni = repomuni;
         }
         //propiedad de transporte
         [BindProperty]
-        public municipio Municipio {get; set;}
+        public municipio Municipio { get; set; }
         public ActionResult OnGet()
         {
             return Page();
         }
+
         public ActionResult OnPost()
         {
             bool funciono = _repomuni.CrearMunicipio(Municipio);
@@ -34,7 +35,7 @@ namespace Presentacion.Pages.Cmunicipio
             }
             else
             {
-                ViewData["Error"] = "El municipio ya exixse";
+                ViewData["Error"] = "El municipio ya existe";
                 return Page();
             }
         }

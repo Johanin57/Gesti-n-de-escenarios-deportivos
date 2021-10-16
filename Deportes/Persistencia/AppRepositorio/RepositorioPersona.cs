@@ -42,14 +42,19 @@ namespace Persistencia
         //BUSCAR PersonaS
         persona IRepositorioPersona.BuscarPersona(int N_identificacion)
         {
-            return _appContext.tb_personas.Find(N_identificacion);
+            return _appContext.tb_personas.FirstOrDefault(x=> x.N_identificacion == N_identificacion);
+        }
+
+        persona IRepositorioPersona.BuscarPersonaId(int Id)
+        {
+                    return _appContext.tb_personas.FirstOrDefault(x => x.Id == Id);
         }
 
         //ELIMINAR Persona
         bool IRepositorioPersona.EliminarPersona(int N_identificacion)
         {
             bool eliminado = false;
-            var Persona = _appContext.tb_personas.Find(N_identificacion);
+            var Persona = _appContext.tb_personas.FirstOrDefault(x => x.N_identificacion == N_identificacion);
 
             if (Persona != null)
             {
@@ -63,7 +68,7 @@ namespace Persistencia
                 {
                     return eliminado;
                 }
-            }
+            }       
             return eliminado;
         }
 
@@ -71,7 +76,7 @@ namespace Persistencia
         bool IRepositorioPersona.ActualizarPersona(persona Persona)
         {
             bool actualizar = false;
-            var per = _appContext.tb_personas.Find(Persona.Id);
+            var per = _appContext.tb_personas.First(x=>x.N_identificacion == Persona.N_identificacion);
             if (per != null)
             {
                 try
@@ -104,6 +109,11 @@ namespace Persistencia
         IEnumerable<persona> IRepositorioPersona.ListarPersonas()
         {
             return _appContext.tb_personas;
+        }
+
+        List<persona> IRepositorioPersona.ListarPersonas1()
+        {
+            return _appContext.tb_personas.ToList();
         }
 
         // Validar la exitencia de un municipio

@@ -1,0 +1,47 @@
+﻿@page
+@model Presentacion.Pages.CCancha.IndexModel
+@{
+    ViewData["Title"] = "Cancha";
+}
+
+<H1>Listado de Cancha</H1>
+
+<a asp-page="Crear" class="btn btn-secondary">Registar Cancha</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th> Nombre </th>
+            <th> Deporte </th>
+            <th> Espectadores</th>
+            <th> Medidas </th>
+            <th> Escenario </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.canchaView)
+        {
+            <tr>
+                <td> @item.Nombre </td>
+                <td> @item.Deporte </td>
+                <td> @item.N_Espectadores </td>
+                <td> @item.Medidas </td>
+                <td> @item.escenarioNombre</td>
+
+
+                <td>
+
+                    <a asp-page="./Editar" asp-route-id="@item.Id" class="btn badge-warning">Editar</a>
+                    <a>  -  </a>
+                    <a asp-page="./Detalles" asp-route-id="@item.Id" class="btn btn-success">Detalles</a>
+                    <a>  -  </a>
+                    <a asp-page="./Eliminar" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+
+
+                </td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>

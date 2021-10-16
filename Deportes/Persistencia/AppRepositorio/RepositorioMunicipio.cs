@@ -96,6 +96,11 @@ namespace Persistencia
             return _appContext.tb_municipios;
         }
 
+        List<municipio> IRepositorioMunicipio.ListarMunicipios1()
+        {
+            return _appContext.tb_municipios.ToList();
+        }
+
         // Validar la exitencia de un municipio
         bool ValidarNombre(municipio municipio)
         {

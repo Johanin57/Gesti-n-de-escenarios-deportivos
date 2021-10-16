@@ -1,0 +1,57 @@
+﻿@page
+@model Presentacion.Pages.CPersona.DetalleModel
+@{
+    ViewData["Title"] = "Detalle";
+}
+
+<h1>Detalles Persona</h1>
+<h2 class="">@ViewData["Error"]</h2>
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <input type="hidden" asp-page="ObjPersona.N_identifacion" />
+                <div class="form-group">
+                    <label asp-for="ObjPersona.N_identificacion" readonly></label>
+                    <input asp-for="ObjPersona.N_identificacion" readonly /><br />
+                    <label asp-for="ObjPersona.Nombres" readonly></label>
+                    <input asp-for="ObjPersona.Nombres" readonly /><br />
+                    <label asp-for="ObjPersona.Apellidos" readonly></label>
+                    <input asp-for="ObjPersona.Apellidos" readonly /><br />
+                    <label asp-for="ObjPersona.tipo_persona" readonly></label>
+                    <input asp-for="ObjPersona.tipo_persona" readonly /><br />
+                    <label asp-for="ObjPersona.Correo" readonly></label>
+                    <input asp-for="ObjPersona.Correo" readonly/><br />
+                    <label asp-for="ObjPersona.Direccion" readonly></label>
+                    <input asp-for="ObjPersona.Direccion" readonly/><br />
+                    <label asp-for="ObjPersona.Celular" readonly></label>
+                    <input asp-for="ObjPersona.Celular" readonly/><br />
+                    <label asp-for="ObjPersona.Genero" readonly></label>
+                    <input asp-for="ObjPersona.Genero" readonly/><br />
+                    <label asp-for="ObjPersona.EPS"readonly></label>
+                    <input asp-for="ObjPersona.EPS" readonly/><br />
+                    <label asp-for="ObjPersona.RH"readonly></label>
+                    <input asp-for="ObjPersona.RH" readonly/>
+                    <label asp-for="ObjPersona.Rol" readonly></label>
+                    <input asp-for="ObjPersona.Rol" readonly>
+                    <label asp-for="ObjPersona.F_nacimiento" readonly></label>
+                    <input asp-for="ObjPersona.F_nacimiento" readonly/><br />
+
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="ATRAS" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-page="./Index">Ir al Inicio</a>
+    </div>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
+
+

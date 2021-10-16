@@ -220,7 +220,7 @@ namespace Persistencia.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_tb_torneos_encuentros", x => new { x.Id_torneo, x.Id_encuentro });
+                    table.PrimaryKey("PK_tb_torneos_encuentros", x => new { x.Id_torneo, x.Id_encuentro, x.Id_equipo });
                     table.ForeignKey(
                         name: "FK_tb_torneos_encuentros_tb_encuentros_encuentrosId",
                         column: x => x.encuentrosId,

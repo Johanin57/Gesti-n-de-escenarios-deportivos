@@ -1,0 +1,33 @@
+﻿@page
+@model Presentacion.Pages.CTorneo.EliminarModel
+@{
+    ViewData["Title"] = "ELiminar";
+}
+}
+<h1>Eliminar Torneo</h1>
+<h2 class="">@ViewData["Error"]</h2>
+<h2>@ViewData["funciono"]</h2>
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <input type="" asp-page="ObjTorneo.Id" />
+                <div type="Hidden" class="form-group">
+                    <label asp-for="ObjTorneo.Id" class="control-label"></label>
+                    <label asp-for="ObjTorneo.Id" class="control-label" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="ELIMINAR" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-page="./Index">Ir al Inicio</a>
+    </div>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

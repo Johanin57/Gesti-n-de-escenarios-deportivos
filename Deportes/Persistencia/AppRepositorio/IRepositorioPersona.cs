@@ -11,8 +11,10 @@ namespace Persistencia
         //Firmar metodos
         bool CrearPersona(persona Persona);
         persona BuscarPersona(int n_identificacion);
+        persona BuscarPersonaId(int Id);
         bool EliminarPersona(int IdPersona);
         bool ActualizarPersona(persona Persona);
         IEnumerable<persona> ListarPersonas();
+        List<persona> ListarPersonas1();
     }
 }

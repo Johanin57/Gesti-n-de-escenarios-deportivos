@@ -6,7 +6,7 @@
 
 <H1>Listado de Municipio</H1>
 
-<a asp-page="Crear">Registar Municipio</a>
+<a asp-page="Crear" class="btn btn-secondary">Registar Municipio</a>
 <table class="table">
     <thead>
     <tr>
@@ -21,11 +21,13 @@
             <td> @item.Id </td>
             <td> @item.Nombre </td>
             <td>
-                <a asp-page="./Editar" asp-route-id="@item.Id">Editar</a>
+                <a asp-area="" asp-page="/CEscenario/Crear" class="btn btn-info">Escenarios</a>
                 <a>  -  </a>
-                <a asp-page="./Eliminar" asp-route-id="@item.Id">Eliminar</a>
+                <a asp-page="./Editar" asp-route-id="@item.Id" class="btn btn-warning">Editar</a>
                 <a>  -  </a>
-                <a asp-page="./Detalle" asp-route-id="@item.Id">Detalles</a>
+                <a asp-page="./Detalles" asp-route-id="@item.Id" class="btn btn-success">Detalles</a>
+                <a>  -  </a>
+                <a asp-page="./Eliminar" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
 
             </td>
         </tr>

@@ -13,7 +13,6 @@ namespace Presentacion.Pages.Cmunicipio
     {
         //Crear objeto para poder utilizar IRepositorioMunicipio
         private readonly IRepositorioMunicipio _repomuni;
-
         //atributo objeto transportado
         public IEnumerable<municipio> Municipios { get; set;}
         //Constructor de clase

@@ -12,7 +12,9 @@ namespace Persistencia
         //Firmar metodos
         bool CrearEquipos_Torneos(equipos_torneos equipos_torneos);
         equipos_torneos BuscarEquipos_Torneos(int idEquipos_Torneos);
-        bool EliminarEquipos_Torneos(int IdEquipos_Torneos);
+        equipos_torneos BuscarEquiposTorneos(int Id_equipo, int Id_torneo);
+        List<equipos_torneos> BuscarEquiposPorTorneo(int id_torneos);
+        bool EliminarEquipoTorneos(int IdEquipo, int IdTorneo);
         bool ActualizarEquipos_Torneos(equipos_torneos equipos_Torneos);
 
         IEnumerable<equipos_torneos> ListarEquipos_Torneos();

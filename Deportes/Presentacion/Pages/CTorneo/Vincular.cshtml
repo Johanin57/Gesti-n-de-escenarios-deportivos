@@ -1,0 +1,99 @@
+﻿@page
+@model Presentacion.Pages.CTorneo.VincularModel
+
+<h4>Datos del Torneo</h4>
+<h2 class="">@ViewData["Error"]</h2>
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-8">
+            <form method="post">
+                <div class="form-group">
+                    <table>
+                        <tr>
+                            <td><label asp-for="ObjTorneo.Id" hidden></label></td>
+                            <td><label asp-for="ObjTorneo.Nombre"></label></td>
+                            <td><label asp-for="ObjTorneo.Categoria"></label></td>
+                            <td><label asp-for="ObjTorneo.F_Inicio">Fechas Incio</label></td>
+                            <td><label asp-for="ObjTorneo.F_Fin">Fechas Finalizacion</label></td>
+                        </tr>
+                        <tr>
+                            <td><input asp-for="ObjTorneo.Id" hidden /></td>
+                            <td><input asp-for="ObjTorneo.Nombre" readonly /></td>
+                            <td><input asp-for="ObjTorneo.Categoria" readonly /></td>
+                            <td> <input asp-for="ObjTorneo.F_Inicio" readonly /></td>
+                            <td> <input asp-for="ObjTorneo.F_Fin" readonly /></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<h5>Indique el nombre del equipo para agregar al torneo</h5>
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-8">
+            <form method="post">
+                <div class="form-group">
+                    <table>
+                        <tr>
+                            <td><label asp-for="ObjTorneo.Id" class="control-label" hidden></label></td>
+                            <td><input asp-for="ObjTorneo.Id" class="control-label" name="Id_torneo" hidden /></td>
+                            <td><label asp-for="ObjEquipo.Nombre" class="control-label">Nombre del Equipo  </label></td>
+                            <td><input asp-for="ObjEquipo.Nombre" name="Nombre_equipo" class="control-label" /></td>
+                            <td><input type="submit" value="VINCULAR EQUIPO" class="btn btn-success" /></td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<h5>Miembros del Torneo</h5>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th> Id Torneo</th>
+                <th> ID </th>
+                <th> NOMBRE  </th>
+                <th> DEPORTE  </th>
+                <th>   </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.EquiTorV)
+            {
+                <tr>
+                    <td> @item.Id_Torneo</td>
+                    <td> @item.Id_Equipo </td>
+                    <td> @item.EEquipo.Nombre </td>
+                    <td> @item.EEquipo.Deporte<td>
+                    <td> </td>
+                    <td>
+                        @*<a asp-page="/CEquipos_Torneos/Eliminar" asp-route-id="new{@item.Id_Equipo, @item.Id_Torneo}" class="btn btn-danger">Eliminar</a>*@
+                        <a asp-page="/CEquipos_Torneos/Eliminar" asp-route-Id_Equipo="@item.Id_Equipo" asp-route-Id_Torneo="@item.Id_Torneo" class="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+<div>
+    <a asp-page="./Index">Ir al Inicio</a>
+</div>
+
+
+
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
+

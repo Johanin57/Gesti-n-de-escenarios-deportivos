@@ -94,6 +94,10 @@ namespace Persistencia
             return _appContext.tb_encuentros;
         }
 
+        List<encuentro> IRepositorioEncuentro.ListarEncuentros1()
+        {
+            return _appContext.tb_encuentros.ToList();
+        }
 
     }
 }

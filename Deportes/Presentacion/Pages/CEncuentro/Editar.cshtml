@@ -1,0 +1,73 @@
+﻿@page
+@model Presentacion.Pages.CEncuentro.EditarModel
+@{
+    ViewData["Title"] = "Crear Encuentro";
+}
+
+<h1>Crear Encuentro</h1>
+<h2 class="">@ViewData["Error"]</h2>
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div class="form-group">
+                    <label asp-for="ObjEncuentro.Id" hidden></label>
+                    <input asp-for="ObjEncuentro.Id" hidden/>
+                    <table>
+
+                        <tr>
+                            <td><label asp-for="ObjEncuentro.Id_torneo"> Torneo (ID)</label></td>
+                            <td><label asp-for="ObjEncuentro.Id_cancha"> Cancha (ID)</label></td>
+                            <td><label asp-for="ObjEncuentro.Id_persona"> Arbitro (ID)</label></td>
+                            <td><label asp-for="ObjEncuentro.Fecha"></label></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <select asp-for="ObjEncuentro.Id_torneo">
+                                    <option value="">Seleccione una opcion</option>
+                                    @foreach (var item in Model.Torneos)
+                                    {
+                                        <option value="@item.Id">@item.Nombre @item.Categoria</option>
+                                    }
+                                </select>
+                            </td>
+                            <td>
+                                <select asp-for="ObjEncuentro.Id_cancha">
+                                    <option value="">Seleccione una opcion</option>
+                                    @foreach (var item in Model.Canchas)
+                                    {
+                                        <option value="@item.Id">@item.Nombre @item.Deporte </option>
+                                    }
+                                </select>
+                            </td>
+                            <td>
+                                <select asp-for="ObjEncuentro.Id_persona">
+                                    <option value="">Seleccione una opcion</option>
+                                    @foreach (var item in Model.Personas)
+                                    {
+                                        <option value="@item.Id">@item.Nombres @item.Apellidos</option>
+                                    }
+                                </select>
+                            </td>
+                            <td><input asp-for="ObjEncuentro.Fecha" /></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="EDITAR" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-page="./Index">Ir al Inicio</a>
+    </div>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
+
+

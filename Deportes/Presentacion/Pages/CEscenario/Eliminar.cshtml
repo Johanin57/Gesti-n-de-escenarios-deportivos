@@ -1,0 +1,36 @@
+﻿@page
+@model Presentacion.Pages.CEscenario.EliminarModel
+@{
+    ViewData["Title"] = "Eliminar Escenario";
+}
+<h1>Eliminar Escenario</h1>
+<h2 class="">@ViewData["Error"]</h2>
+<h2>@ViewData["funciono"]</h2>
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <input type="" asp-page="ObjEscenario.Id" />
+                <div class="form-group">
+                    <label asp-for="ObjEscenario.Id" class="control-label" hidden></label>
+                    <label asp-for="ObjEscenario.Id" class="control-label" hidden /></br>
+
+                    <label asp-for="ObjEscenario.Nombre" class="control-label">Confirma que desea eliminar el Escenario</label>
+                    <input asp-for="ObjEscenario.Nombre" class="control-label" readonly /></br>
+
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="ELIMINAR" class="btn btn-danger" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-page="./Index">Ir al Inicio</a>
+    </div>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

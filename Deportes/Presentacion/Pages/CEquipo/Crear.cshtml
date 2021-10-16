@@ -1,0 +1,52 @@
+﻿@page
+@model Presentacion.Pages.CEquipo.CrearModel
+@{
+    ViewData["Title"] = "Crear Equipo";
+}
+
+<h1>Crear Equipo</h1>
+<h2 class="">@ViewData["Error"]</h2>
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-8">
+            <form method="post">
+                <div class="form-group">
+                    <table>
+                        <tr>
+                            <td><label asp-for="Equipo.Nombre"></label></td>
+                            <td><input asp-for="Equipo.Nombre" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="Equipo.Deporte"></label></td>
+                            <td>
+                                <select asp-for="Equipo.Deporte">
+                                    <option>Seleccione un opcion</option>
+                                    <option value="Futbol">Futbol</option>
+                                    <option value="Voleibol">Voleibol</option>
+                                    <option value="Tenis">Tenis</option>
+                                    <option value="Baloncesto">Baloncesto</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="Equipo.F_creacion">Fecha Inicio</label></td>
+                            <td> <input asp-for="Equipo.F_creacion" /></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="CREAR" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-page="./Index">Ir al Inicio</a>
+    </div>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
+

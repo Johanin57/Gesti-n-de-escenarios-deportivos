@@ -1,0 +1,105 @@
+﻿@page
+@model Presentacion.Pages.CPersona.EditarModel
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1>Editar Persona</h1>
+<h2 class="">@ViewData["Error"]</h2>
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <input type="hidden" asp-page="ObjPersona.N_identifacion" />
+                <div class="form-group">
+                        <label asp-for="ObjPersona.Nombres"> Numero de Identificacion:@(Model.ObjPersona.N_identificacion) </label>
+                        <table>
+                            <tr>
+                                <td><label asp-for="ObjPersona.N_identificacion" hidden></label></td>
+                                <td><input asp-for="ObjPersona.N_identificacion" hidden /> </td>
+                            </tr>
+                            <tr>
+                                <td><label asp-for="ObjPersona.Nombres"></label></td>
+                                <td><input asp-for="ObjPersona.Nombres" /></td>
+                            </tr>
+                            <tr>
+                                <td><label asp-for="ObjPersona.Apellidos"></label></td>
+                                <td><input asp-for="ObjPersona.Apellidos" /> </td>                               
+                            </tr>
+                            <tr>
+                                <td><label asp-for="ObjPersona.tipo_persona"></label>  </td>
+                                <td><select asp-for="ObjPersona.tipo_persona">
+                                        <option value="">Seleccione una Opción</option>
+                                        <option value="Natural">Natural</option>
+                                        <option value="Juridica">Juridica</option>
+                                        @*selected="@(ObjPersona.tipo_persona=="Natural")"*@
+                                    </select>
+                                </td>                                
+                            </tr>
+                            <tr>
+                                <td><label asp-for="ObjPersona.Correo"></label></td>
+                                <td><input asp-for="ObjPersona.Correo" /></td>                                
+                            </tr>
+                            <tr>
+                                <td><label asp-for="ObjPersona.Direccion"></label> </td>
+                                <td><input asp-for="ObjPersona.Direccion" /></td> </tr>
+                            <tr>
+                                <td><label asp-for="ObjPersona.Celular"></label></td>
+                                <td><input asp-for="ObjPersona.Celular" /></td>
+                            </tr>
+                            <tr>
+                                <td><label asp-for="ObjPersona.Genero"></label></td>
+                                <td><input asp-for="ObjPersona.Genero" /></td>
+                            </tr>
+                            <tr>
+                                <td><label asp-for="ObjPersona.EPS"></label> </td>
+                                <td><input asp-for="ObjPersona.EPS" /></td>
+                            </tr>
+                            <tr>
+                                <td><label asp-for="ObjPersona.RH"></label> </td>
+                                <td><Select asp-for="ObjPersona.RH" />
+                                    <option value="">Seleccione una Opción</option>
+                                    <option value="A +"> A positivo (A +)</option>
+                                    <option value="A -">A negativo (A -)</option>
+                                    <option value="B +">B positivo (B +)</option>
+                                    <option value="B -">B negativo (B -)</option>
+                                    <option value="AB +">AB positivo (AB +)</option>
+                                    <option value="AB -">AB negativo (AB -)</option>
+                                    <option value="O +">O positivo (O +)</option>
+                                    <option value="O -">O negativo (O -)</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label asp-for="ObjPersona.Rol"></label>         </td>
+                                <td><select asp-for="ObjPersona.Rol">
+                                        <option value="">Seleccione una Opción</option>
+                                        <option value="Deportista">Deportista</option>
+                                        <option value="Entrenador">Entrenador</option>
+                                        <option value="Patrocinador">Patrocinador</option>
+                                        <option value="Arbitro">Arbitro</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label asp-for="ObjPersona.F_nacimiento"></label> </td>
+                                <td> <input asp-for="ObjPersona.F_nacimiento" /> </td>
+                            </tr>
+                        </table>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="MODIFICAR" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-page="./Index">Ir al Inicio</a>
+    </div>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
+

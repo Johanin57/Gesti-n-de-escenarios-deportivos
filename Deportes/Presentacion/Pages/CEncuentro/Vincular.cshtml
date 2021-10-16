@@ -1,0 +1,114 @@
+﻿@page
+@model Presentacion.Pages.CEncuentro.VincularModel
+@{
+    ViewData["Title"] = "Vincular Equipos Encuentro";
+}
+    <<h4>Datos del Encuentro</h4>
+    <h2 class="">@ViewData["Error"]</h2>
+
+    <div class="form-horizontal">
+        <div class="row">
+            <div class="col-md-8">
+                <form method="post">
+                    <div class="form-group">
+                        <table>
+                            <tr>
+                                <td><label asp-for="ObjEncuentro.Id" hidden></label></td>                                
+                                <td><label asp-for="OBjEncuV.TorneoNombre">Torneo/Categoria</label></td>
+                                <td><label asp-for="OBjEncuV.CanchaNombre">Cancha/Deporte</label></td>
+                                <td><label asp-for="OBjEncuV.Arbitro">Arbitro</label></td>
+                                <td><label asp-for="OBjEncuV.Fecha">Fecha</label></td>
+                                
+                            </tr>
+                            <tr>
+                                <td><input asp-for="ObjEncuentro.Id" hidden /></td>
+                                <td><input asp-for="OBjEncuV.TorneoNombre" readonly /></td>
+                                <td><input asp-for="OBjEncuV.CanchaNombre" readonly /></td>
+                                <td> <input asp-for="OBjEncuV.Arbitro" readonly /></td>
+                                <td> <input asp-for="OBjEncuV.Fecha" readonly /></td>
+
+                            </tr>
+                        </table>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <h5>Indique el nombre del equipo para agregar al Encuentro</h5>
+    <div class="form-horizontal">
+        <div class="row">
+            <div class="col-md-8">
+                <form method="post">
+                    <div class="form-group">
+                        <table>
+                            <tr>
+                                <td><label asp-for="OBjEncuV.Id_torneo" class="control-label" hidden></label></td>
+                                <td><input asp-for="OBjEncuV.Id_torneo" class="control-label" name="Id_Torneo" hidden /></td>
+                                <td><label asp-for="ObjEncuentro.Id" class="control-label" hidden></label></td>
+                                <td><input asp-for="ObjEncuentro.Id" class="control-label" name="Id_Encuentro" hidden /></td>
+                                <td><label  class="control-label">Nombre del Equipo  </label></td>
+                                <td><select  name="Id_Equipo" class="control-label" >
+                                    <option>Seleccione una opcion</option>
+                                    @foreach (var w in Model.LEquipos) 
+                                    {
+                                        <option value="@w.Id">@w.Nombre </option>                                   
+                                    }   
+                                    </select>
+                                </td>
+                                <td><input type="submit" value="VINCULAR EQUIPO" class="btn btn-success" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <h5>Equipos del Encuentro</h5>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th> Id Encuentro</th>
+                    <th> ID Equipo </th>
+                    <th> NOMBRE  </th>
+                    <th> DEPORTE  </th>
+                    <th>   </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.TorEncuV)
+                {
+                    <tr>
+                        <td> @item.eencuentros.Id</td>
+                        <td> @item.eequipos.Id </td>
+                        <td> @item.eequipos.Nombre </td>
+                        <td> @item.eequipos.Deporte</td>
+                        <td> </td>
+                        <td>
+                           
+<a asp-page="/CEquipos_Encuentros/Eliminar" asp-route-Id_Torneo="@item.ttorneos.Id" asp-route-Id_Encuentro="@item.eencuentros.Id" asp-route-Id_Equipo="@item.eequipos.Id" class="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+
+@*
+*@
+<div>
+    <a asp-page="./Index">Ir al Inicio</a>
+</div>
+
+
+
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

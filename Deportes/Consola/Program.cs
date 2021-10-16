@@ -22,7 +22,7 @@ namespace Consola
         {
             var per = new persona
             {
-                N_identificacion = "1234",
+                N_identificacion = 1234,
                 tipo_persona = "Natural",
                 Nombres = "Carlos",
                 Apellidos = "Garcia",

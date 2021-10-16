@@ -1,0 +1,98 @@
+﻿@page
+@model Presentacion.Pages.CEquipo.MiembrosModel
+
+<h4>Datos del Equipo</h4>
+<h2 class="">@ViewData["Error"]</h2>
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-8">
+            <form method="post">
+                <div class="form-group">
+                    <table>
+                        <tr>
+                            <td><label asp-for="ObjEquipo.Id" hidden></label></td>
+                            <td><label asp-for="ObjEquipo.Nombre"></label></td>
+                            <td><label asp-for="ObjEquipo.Deporte"></label></td>
+                            <td><label asp-for="ObjEquipo.F_creacion">Fecha Creacion</label></td>
+                        </tr>
+                        <tr>
+                            <td><input asp-for="ObjEquipo.Id" hidden /></td>
+                            <td><input asp-for="ObjEquipo.Nombre" readonly /></td>
+                            <td><input asp-for="ObjEquipo.Deporte" readonly /></td>
+                            <td> <input asp-for="ObjEquipo.F_creacion" readonly /></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<h5>Indique la identificacion del miembro del equipo a agregar</h5>
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div class="form-group">
+                    <table>
+                        <tr>
+                            <td><label asp-for="ObjEquipo.Id" class="control-label" hidden></label></td>
+                            <td><input asp-for="ObjEquipo.Id" class="control-label" name="Id" hidden /></td>
+                            <td><label asp-for="ObjPersona.N_identificacion" class="control-label">Identificación  </label></td>
+                            <td>    </td>
+                            <td><input asp-for="ObjPersona.N_identificacion" name="N_identificacion" class="control-label" /></td>
+                            <td><input type="submit" value="AGREGAR MIEMBRO" class="btn btn-success" /></td>
+                            <td><input asp-page="/Cpersona/Crear" value="Crear Persona"  /></td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<h5>Miembros del equipo</h5>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th> ID </th>
+                <th> NOMBRE Y APELLIDO  </th>
+                <th> IDENTIFICACION  </th>
+                <th> ROL  </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.persoEquiV)
+            {
+                <tr>
+                    <td> @item.Id_equipo</td>
+                    <td> @item.Id_persona </td>
+                    <td> @item.PPersona.Nombres @item.PPersona.Apellidos </td>
+                    <td> @item.PPersona.N_identificacion</td>
+                    <td> @item.PPersona.Rol</td>
+                    <td>
+                        @*<a asp-page="/CPersonas_Equipos/Eliminar" asp-route-id="new{@item.Id_persona, @item.Id_equipo}" class="btn btn-danger">Eliminar</a>*@
+                        <a asp-page="/CPersonas_Equipos/Eliminar" asp-route-Id_persona="@item.Id_persona" asp-route-Id_equipo="@item.Id_equipo" class="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+<div>
+    <a asp-page="./Index">Ir al Inicio</a>
+</div>
+
+
+
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
+

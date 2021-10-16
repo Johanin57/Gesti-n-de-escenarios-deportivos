@@ -95,6 +95,10 @@ namespace Persistencia
             return _appContext.tb_torneos;
         }
 
+        List<torneo> IRepositorioTorneo.ListarTorneos1()
+        {
+            return _appContext.tb_torneos.ToList();
+        }
 
     }
 }

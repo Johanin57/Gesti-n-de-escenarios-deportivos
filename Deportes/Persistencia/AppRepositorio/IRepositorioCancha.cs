@@ -16,6 +16,7 @@ namespace Persistencia
         bool ActualizarCancha(cancha cancha);
 
         IEnumerable<cancha> ListarCancha();
+        List<cancha> ListarCancha1();
 
     }
 }

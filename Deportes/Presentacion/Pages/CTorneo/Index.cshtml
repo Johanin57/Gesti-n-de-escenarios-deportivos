@@ -1,4 +1,46 @@
 ﻿@page
 @model Presentacion.Pages.CTorneo.IndexModel
 @{
+    ViewData["Title"] = "Torneo";
 }
+
+<H1>Listado de Torneo</H1>
+
+<a asp-page="Crear" class="btn btn-secondary">Registar Torneo</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th> Nombre </th>
+            <th> Categoria </th>
+            <th> Fecha Inicio </th>
+            <th> Fecha Fin </th>
+            <th> Num. Rondas </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Torneos)
+        {
+        <tr>
+            <td> @item.Nombre </td>
+            <td> @item.Categoria </td>
+            <td> @item.F_Inicio </td>
+            <td> @item.F_Fin </td>
+            <td> @item.N_rondas </td>
+
+            <td>
+                <a asp-page="./Vincular" asp-route-id="@item.Id" class="btn badge-info">Vincular Eq</a>
+                <a>  -  </a>
+                <a asp-page="./Editar" asp-route-id="@item.Id" class="btn badge-warning">Editar</a>
+                <a>  -  </a>
+                <a asp-page="./Detalles" asp-route-id="@item.Id" class="btn btn-success">Detalles</a>
+                <a>  -  </a>
+                <a asp-page="./Eliminar" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+
+
+            </td>
+        </tr>
+        }
+    </tbody>
+
+</table>

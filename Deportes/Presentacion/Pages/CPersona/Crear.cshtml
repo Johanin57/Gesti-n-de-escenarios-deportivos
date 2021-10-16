@@ -1,0 +1,74 @@
+﻿@page
+@model Presentacion.Pages.CPersona.CrearModel
+@{
+    ViewData["Title"] = "Crear Persona";
+}
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-8">
+            <form method="post">
+                <div class="form-group">
+                    <table>
+                        <tr>
+                            <td><label asp-for="Persona.Nombres"></label></td>
+                            <td><input asp-for="Persona.Nombres" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="Persona.Apellidos"></label></td>
+                            <td><input asp-for="Persona.Apellidos" /></td>
+                        </tr>
+                        <tr><td><label asp-for="Persona.tipo_persona"></label></td>
+                            <td><input asp-for="Persona.tipo_persona" /></td>                            
+                        </tr>
+                        <tr>
+                            <td><label asp-for="Persona.N_identificacion"></label></td>
+                            <td><input asp-for="Persona.N_identificacion" /> </td>                           
+                        </tr>
+                        <tr>
+                            <td><label asp-for="Persona.Correo"></label></td>
+                            <td><input asp-for="Persona.Correo" /></td>                           
+                        </tr>
+                        <tr>
+                            <td><label asp-for="Persona.Direccion"></label></td>
+                            <td><input asp-for="Persona.Direccion" /></td>                          
+                        </tr>
+                        <tr>
+                            <td><label asp-for="Persona.Celular"></label></td>
+                            <td><input asp-for="Persona.Celular" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="Persona.Genero"></label></td>
+                            <td><input asp-for="Persona.Genero" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="Persona.EPS"></label></td>
+                            <td><input asp-for="Persona.EPS" /> </td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="Persona.RH"></label></td>
+                            <td><input asp-for="Persona.RH" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="Persona.Rol"></label></td>
+                            <td><input asp-for="Persona.Rol" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="Persona.F_nacimiento"></label> </td>
+                            <td><input asp-for="Persona.F_nacimiento" /> </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="CREAR" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-page="./Index">Ir al Inicio</a>
+    </div>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

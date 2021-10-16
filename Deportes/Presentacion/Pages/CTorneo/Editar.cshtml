@@ -1,0 +1,55 @@
+﻿@page
+@model Presentacion.Pages.CTorneo.EditarModel
+@{
+    ViewData["Title"] = "Editar Torneo";
+}
+
+<h1>Editar Torneo</h1>
+<h2 class="">@ViewData["Error"]</h2>
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div class="form-group">
+                    <table>
+                        <tr>
+                            <td><label asp-for="ObjTorneo.Id" hidden></label></td>
+                            <td><input asp-for="ObjTorneo.Id" hidden /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="ObjTorneo.Nombre"></label></td>
+                            <td><input asp-for="ObjTorneo.Nombre" /></br></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="ObjTorneo.Categoria"></label></td>
+                            <td><input asp-for="ObjTorneo.Categoria" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="ObjTorneo.F_Inicio">Fecha Inicio</label></td>
+                            <td><input asp-for="ObjTorneo.F_Inicio" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="ObjTorneo.F_Fin">Fecha Fin</label></td>
+                            <td><input asp-for="ObjTorneo.F_Fin" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="ObjTorneo.N_rondas">Num. Rodas</label></td>
+                            <td><input asp-for="ObjTorneo.N_rondas" /></td>
+                        </tr>                       
+                    </table>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="EDITAR" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-page="./Index">Ir al Inicio</a>
+    </div>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

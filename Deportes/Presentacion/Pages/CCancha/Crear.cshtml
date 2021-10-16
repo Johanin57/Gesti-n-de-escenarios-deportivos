@@ -1,0 +1,62 @@
+﻿@page
+@model Presentacion.Pages.CCancha.CrearModel
+@{
+    ViewData["Title"] = "Crear Cancha";
+}
+
+<h1>Crear Cancha</h1>
+<h2 class="">@ViewData["Error"]</h2>
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div class="form-group">
+                    <table>
+                        <tr>
+                            <td><label asp-for="Cancha.Nombre"></label></td>
+                            <td><input asp-for="Cancha.Nombre" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="Cancha.Deporte"></label></td>
+                            <td><input asp-for="Cancha.Deporte" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="Cancha.N_Espectadores"></label></td>
+                            <td> <input asp-for="Cancha.N_Espectadores" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="Cancha.Medidas">Medidas Mts</label></td>
+                            <td> <input asp-for="Cancha.Medidas" /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="Cancha.Id_escenario"> Escenario (ID)</label></td>
+                            <td>
+                                <select asp-for="Cancha.Id_escenario">
+                                    <option value="">Seleccione una opcion</option>
+                                    @foreach (var item in Model.Esc)
+                                    {
+                                        <option value="@item.Id">@item.Nombre</option>
+                                    }
+
+                                </select>
+                            <small asp-page="/CEscenarios/Crear">Para un escenrio diferencte click AQUI</small>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="CREAR" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-page="./Index">Ir al Inicio</a>
+    </div>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
+

@@ -19,7 +19,7 @@ namespace Persistencia
         }
 
         //CREAR ESCENARIO
-        bool IRepositorioEscenario.CrearEscenario(escenario escenario)   
+        bool IRepositorioEscenario.CrearEscenario(Escenario escenario)   
         {
             bool creado = false;
             try
@@ -36,7 +36,7 @@ namespace Persistencia
         }
 
         //BUSCAR ESCENARIOS
-        escenario IRepositorioEscenario.BuscarEscenario(int IdEscenario)
+        Escenario IRepositorioEscenario.BuscarEscenario(int IdEscenario)
         {
             return _appContext.tb_escenario.Find(IdEscenario);
         }
@@ -64,7 +64,7 @@ namespace Persistencia
         }
 
         //ACTUALIZAR Escenario
-        bool IRepositorioEscenario.ActualizarEscenario(escenario escenario)
+        bool IRepositorioEscenario.ActualizarEscenario(Escenario escenario)
         {
             bool actualizar = false;
             var esc = _appContext.tb_escenario.Find(escenario.Id);
@@ -89,9 +89,14 @@ namespace Persistencia
         }
 
         //LISTAR Escenario
-        IEnumerable<escenario> IRepositorioEscenario.ListarEscenario()
+        IEnumerable<Escenario> IRepositorioEscenario.ListarEscenario()
         {
             return _appContext.tb_escenario;
+        }
+
+        List<Escenario> IRepositorioEscenario.ListarEscenario1()
+        {
+            return _appContext.tb_escenario.ToList();
         }
 
 

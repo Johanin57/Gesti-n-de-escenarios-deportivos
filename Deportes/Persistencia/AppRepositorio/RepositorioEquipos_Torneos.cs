@@ -42,17 +42,26 @@ namespace Persistencia
             return _appContext.tb_equipos_torneos.Find(Id_Equipos_Torneos);
         }
 
+        equipos_torneos IRepositorioEquipos_Torneos.BuscarEquiposTorneos(int Id_equipo, int Id_torneo)
+        {
+            return _appContext.tb_equipos_torneos.Where(x => x.Id_equipo.Equals(Id_equipo) && x.Id_torneo.Equals(Id_torneo)).FirstOrDefault();
+        }
+
+        List<equipos_torneos> IRepositorioEquipos_Torneos.BuscarEquiposPorTorneo(int Id_torneo)
+        {
+            return _appContext.tb_equipos_torneos.Where(x => x.Id_torneo.Equals(Id_torneo)).ToList();
+        }
+
         //ELIMINAR Equipos_Torneos
-        bool IRepositorioEquipos_Torneos.EliminarEquipos_Torneos(int IdEquipos_Torneos)
+        bool IRepositorioEquipos_Torneos.EliminarEquipoTorneos(int IdEquipo, int IdTorneo)
         {
             bool eliminado = false;
-            var Equipos_Torneos = _appContext.tb_equipos_torneos.Find(IdEquipos_Torneos);
-
-            if (Equipos_Torneos != null)
+            var EquipoTor = _appContext.tb_equipos_torneos.Where(x => x.Id_equipo.Equals(IdEquipo) && x.Id_torneo.Equals(IdTorneo)).FirstOrDefault();
+            if (EquipoTor != null)
             {
                 try
                 {
-                    _appContext.tb_equipos_torneos.Remove(Equipos_Torneos);
+                    _appContext.tb_equipos_torneos.Remove(EquipoTor);
                     _appContext.SaveChanges();
                     eliminado = true;
                 }

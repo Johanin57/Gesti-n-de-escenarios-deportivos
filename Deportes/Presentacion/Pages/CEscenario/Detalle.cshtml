@@ -1,0 +1,54 @@
+﻿@page
+@model Presentacion.Pages.CEscenario.DetalleModel
+@{
+    ViewData["Title"] = "DEtalles Escenario";
+}
+
+<h1>Detalle Escenario</h1>
+<h2 class="">@ViewData["Error"]</h2>
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div class="form-group">
+                    <table>
+                        <tr>
+                            <td><label asp-for="ObjEscenario.Id" hidden></label></td>
+                            <td><input asp-for="ObjEscenario.Id" hidden /></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="ObjEscenario.Nombre" readonly></label></td>
+                            <td><input asp-for="ObjEscenario.Nombre" readonly /></br></td>
+                        </tr>
+                        <tr>
+                            <td><label asp-for="ObjEscenario.Direccion"></label></td>
+                            <td><input asp-for="ObjEscenario.Direccion" readonly /></td>
+                        <tr>
+                            <td><label asp-for="ObjEscenario.Telefono"></label></td>
+                            <td><input asp-for="ObjEscenario.Telefono" readonly /></td>
+                        <tr>
+                            <td><label asp-for="ObjEscenario.Id_municipio">Municipio (ID)</label></td>
+                            <td><select asp-for="ObjEscenario.Id_municipio" readonly>
+                                    <option value="">Seleccione una opcion</option>
+                                    @foreach (var item in Model.Muni)
+                                    {
+                                        <option value="@item.Id">@item.Nombre</option>
+                                    }
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div>
+        <a asp-page="./Index">Ir al Inicio</a>
+    </div>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
